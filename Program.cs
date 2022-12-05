@@ -6,29 +6,15 @@ using System.Threading.Tasks;
 
 namespace Exercise_4
 {
-    public class Stack : IEnumerable<int>
+    class node
     {
-        private int Davin;
-        private int[] StackArray;
-        private int top = -1;
-
-        public int Count { get;{ return top + 1; } }
-
-        public Stack(int Davin)
+        public int Davin;
+        public node next;
+        public node(int i, node n)
         {
-            this.Davin = Davin;
-            StackArray = new int[Davin];
+            Davin = i;
+            next = n;
         }
-        public void push(int item)
-        {
-            if ((top + 1) == Davin)
-            {
-                Array.Resize(ref StackArray, ++Davin);
-            }
-            top++;
-            StackArray[top] = item;
-        }
-
     }
     internal class Program
     {
