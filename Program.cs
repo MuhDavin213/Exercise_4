@@ -19,7 +19,16 @@ namespace Exercise_4
             this.Davin = Davin;
             StackArray = new int[Davin];
         }
-        
+        public void push(int item)
+        {
+            if ((top + 1) == Davin)
+            {
+                Array.Resize(ref StackArray, ++Davin);
+            }
+            top++;
+            StackArray[top] = item;
+        }
+
     }
     internal class Program
     {
