@@ -8,9 +8,9 @@ namespace Exercise_4
 {
     class node
     {
-        public int Davin;
+        public string Davin;
         public node next;
-        public node(int i, node n)
+        public node(string i, node n)
         {
             Davin = i;
             next = n;
@@ -30,7 +30,7 @@ namespace Exercise_4
             else
                 return (false);
         }
-        public void push(int element)
+        public void push(string element)
         {
             node fresh;
             fresh = new node(element, null);
@@ -71,7 +71,27 @@ namespace Exercise_4
                 char ch = Convert.ToChar(input == "" ? "0" : input);
                 switch (ch)
                 {
-                    case
+                    case '1':
+                        Console.Write("\nEnter your name: ");
+                        string b = (String)(Console.ReadLine());
+                        s.push(b);
+                        break;
+                    case '2':
+                        if (s.empty())
+                        {
+                            Console.WriteLine("/nStack Empty");
+                            break;
+                        }
+                        s.pop();
+                        break;
+                    case '3':
+                        s.display();
+                        break;
+                    case '4':
+                        return;
+                    default:
+                        Console.WriteLine("\nInvalid Choice");
+                        break;
                 }
             }
         }
