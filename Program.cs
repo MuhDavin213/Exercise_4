@@ -36,12 +36,19 @@ namespace Exercise_4
             fresh = new node(element, null);
             fresh.next = top;
             top = fresh;
-            Console.WriteLine("\n" + element + "pushed")
+            Console.WriteLine("\n" + element + "pushed");
         }
         public void pop()
         {
-            Console.WriteLine("The poped elements is:" + top.info);
+            Console.WriteLine("The poped elements is:" + top.Davin);
             top = top.next;
+        }
+        public void display()
+        {
+            node tmp;
+            if (empty())
+                Console.WriteLine("\nStack Empty");
+            else
         }
 
     }
