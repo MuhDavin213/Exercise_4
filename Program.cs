@@ -16,6 +16,25 @@ namespace Exercise_4
             next = n;
         }
     }
+    class Stack
+    {
+        node top;
+        public Stack()
+        {
+            top = null;
+        }
+        bool empty()
+        {
+            if (top == null)
+                return (true);
+            else
+                return (false);
+        }
+        public void push(int element)
+        {
+            
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
