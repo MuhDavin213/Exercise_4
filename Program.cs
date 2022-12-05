@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace Exercise_4
 {
-    class node
+    public class Stack : IEnumerable<int>
     {
-        public int info;
-        public node next;
+        private int Davin;
+        private int[] StackArray;
+        private int top = -1;
+
+        public int Count { get;{ return top + 1; } }
+
+        public Stack(int Davin)
+        {
+            this.Davin = Davin;
+            StackArray = new int[Davin];
+        }
+        
     }
     internal class Program
     {
